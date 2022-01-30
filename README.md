@@ -1,0 +1,1 @@
+# thermal-images-ostrich
