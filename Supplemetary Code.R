@@ -328,30 +328,6 @@ MCMCglmm(NeckAve ~ TempCon:TempDir*Pop*BodyMass_z + poly(daytime_z,2)*BodyMass_z
 
 
 #############################################################
-# 5. Incubation vs Standing
-#############################################################
-
-#----------- Analysis head 
-
-t.test(sitting$Head_sit[sitting$TimeGroup %in% "Afternoon"], sitting$Head_befaf[sitting$TimeGroup %in% "Afternoon"], paired = TRUE, alternative = "two.sided")
-
-t.test(sitting$Head_sit[sitting$TimeGroup %in% "Morning"], sitting$Head_befaf[sitting$TimeGroup %in% "Morning"], paired = TRUE, alternative = "two.sided")
-
-#----------- Analysis neck 
-
-t.test(sitting$Neck_sit[sitting$TimeGroup %in% "Afternoon"], sitting$Neck_befaf[sitting$TimeGroup %in% "Afternoon"], paired = TRUE, alternative = "two.sided")
-
-t.test(sitting$Neck_sit[sitting$TimeGroup %in% "Morning"], sitting$Neck_befaf[sitting$TimeGroup %in% "Morning"], paired = TRUE, alternative = "two.sided")
-
-#----------- Analysis Diff 
-
-t.test(sitting$NeckTempDiff[sitting$TimeGroup %in% "Afternoon"], sitting$HeadTempDiff[sitting$TimeGroup %in% "Afternoon"], paired = TRUE, alternative = "two.sided")
-
-t.test(sitting$NeckTempDiff[sitting$TimeGroup %in% "Morning"], sitting$HeadTempDiff[sitting$TimeGroup %in% "Morning"], paired = TRUE, alternative = "two.sided")
-
-
-
-#############################################################
 # Estimating evolutionary parameters
 #############################################################
 
